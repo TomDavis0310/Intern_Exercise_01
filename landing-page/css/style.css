@@ -1,3 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CSS cho phần header và logo */
 .site-header {
   padding-top: 30px;
 }
@@ -7,7 +24,7 @@
   align-items: center;
   gap: 10px;
   width: fit-content;
-  margin: 0 auto;
+  margin: 80px auto 80px;
 }
 
 .logo-icon {
@@ -18,7 +35,7 @@
 
 .brand-name {
   font-family: Poppins, sans-serif;
-  font-weight: 346px;
+  font-weight: 300;
   font-size: 87px;
   line-height: 1;
   color: #6d91ee;
@@ -30,7 +47,7 @@
   font-weight: 800;
   font-size: 30px;
   line-height: 1.2;
-  letter-spacing: 80%;
+  letter-spacing: 0.35em;
   color: #6d91ee;
   margin-top: 2px;
   vertical-align: middle;
@@ -40,13 +57,12 @@
   height: 59px;
   top: 0px;
   left: 0px;
-  angle: 0 deg;
   opacity: 1;
 }
 h1 {
   color: #4f4f4f;
   font-family: "Poppins", sans-serif;
-  font-weight: 20px;
+  font-weight: 200;
   font-size: 96px;
   line-height: 89.5px;
   letter-spacing: 0%;
@@ -54,31 +70,108 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px auto;
 }
 
 .background-body {
   background-image: url("../assets/images/Vector7.jpg");
   background-repeat: no-repeat;
+  background-position: left top;
   background-size: 70% 100%;
   width: 100%;
   min-height: 100vh;
 }
 
 .background-about {
+  position: relative;
   width: 100%;
-  min-height: 100vh;
-  padding: 60px 20px;
-  background-image:
-    linear-gradient(rgba(109, 145, 238, 0.75), rgba(109, 145, 238, 0.75)),
-    url("../assets/images/43449ec75ab4770fb0ff3123d0ae01db31c409a7.jpg");
+  min-height: 700px;
+  padding: 70px 40px 120px;
+  overflow: hidden;
 
+  background-image:
+    linear-gradient(rgba(109, 145, 238, 0.72), rgba(109, 145, 238, 0.72)),
+    url("../assets/images/43449ec75ab4770fb0ff3123d0ae01db31c409a7.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
+}
+
+.about-overlay-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 120%;
+  background: #6d91ee;
+  z-index: 1;
+  clip-path: polygon(34% 0, 100% 0, 100% 100%, 0 100%);
+  border-top-left-radius: 90px;
+  border-bottom-left-radius: 220px;
+}
+.about-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.about-left,
+.about-right {
+  width: 44%;
+}
+
+.about-left {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.about-right {
+  padding-top: 60px;
+  text-align: right;
+}
+
+.about-title {
+  margin: 0 0 28px;
+  font-family: "Poppins", sans-serif;
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.about-text,
+.about-text.left,
+.about-text.right {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 600;
+  color: #ffffff;
+  max-width: 470px;
+  margin-bottom: 26px;
+}
+
+.about-text.left {
+  text-align: left;
+}
+
+.about-text.right {
+  text-align: right;
+}
+
+.about-image {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 h2 {
@@ -86,12 +179,10 @@ h2 {
   height: 90;
   top: 3491px;
   left: 768px;
-  angle: 0 deg;
   opacity: 1;
   font-family: "Poppins", sans-serif;
-  font-weight: 900px;
+  font-weight: 900;
   font-size: 64px;
-  leading-trim: NONE;
   line-height: 89.5px;
   letter-spacing: 0%;
   text-align: center;
@@ -100,7 +191,7 @@ h2 {
   font-style: normal;
   padding: 20px;
   margin: 20px;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
 }
@@ -110,14 +201,13 @@ h2 {
   border: 2px #ffffff;
 }
 .under {
-  font-weight: 900px;
+  font-weight: 900;
 }
 
 h3 {
   font-family: Poppins;
   font-weight: 700;
   font-size: 24px;
-  leading-trim: NONE;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
@@ -133,8 +223,112 @@ p {
   color: #4f4f4f;
   width: 552px;
   display: center;
+  margin: auto;
 }
 
+/* CSS cho phần Testimonials */
+.testimonials {
+  padding: 80px 20px 100px;
+  background: #f3f3f3;
+  font-family: "Poppins", sans-serif;
+}
+
+.testimonials-title-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.testimonials-title {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+  color: #6d91ee;
+}
+
+.testimonials-line {
+  width: 42px;
+  height: 2px;
+  background: #6d91ee;
+  display: inline-block;
+}
+
+.testimonials-box {
+  max-width: 1199px;
+  margin: 0 auto;
+  width: 1199;
+  height: 511;
+  top: 2864px;
+  left: 352px;
+  border-width: 1px;
+  border: 1px #6d91ee;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px;
+}
+
+.testimonial-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 26px 24px 22px;
+  border: 1.5px solid #8aa8ff;
+  border-radius: 34px;
+  background: #f3f3f3;
+  width: 577;
+  height: 233;
+  top: 2864px;
+  left: 352px;
+  border-width: 1px;
+}
+
+.testimonial-avatar {
+  width: 80;
+  height: 80;
+  top: 2894px;
+  left: 382px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonial-content h3 {
+  margin: 0 0 10px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #6d91ee;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+
+.testimonial-content p {
+  margin: 0 0 12px;
+  line-height: 1.55;
+  color: #1f2a5a;
+  text-align: left;
+  width: auto;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+}
+
+.testimonial-stars {
+  font-size: 18px;
+  letter-spacing: 6px;
+  color: #6d91ee;
+  line-height: 1;
+}
+/*CSS cho phần Contact */
 .container {
   display: flex;
   justify-content: center;
@@ -172,17 +366,25 @@ p {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 10px;
+  margin: 10px auto 0;
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
 .btn-about {
-  background: #eec04b;
+  position: relative;
+  margin: 100px auto 0;
+  background: #fcfcfcfc;
   color: #000000;
+  z-index: 3;
 }
 
+.btn-contract {
+  background: #fcfcfcfc;
+  color: #5180f6;
+  border: 2px solid #5180f6;
+}
 /* CSS cho phần Services */
 
 .services-list {
@@ -190,8 +392,8 @@ p {
   justify-content: center;
   gap: 18px;
   flex-wrap: wrap;
-  width: 1199px;
-  height: 504px;
+  max-width: 1199px;
+  /* height: 504px; */
   margin: 0 auto 36px;
 }
 
@@ -201,7 +403,6 @@ p {
   background: #ffffff;
   border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   text-align: left;
 }
 
@@ -237,7 +438,7 @@ p {
   line-height: 20px;
   letter-spacing: 0%;
   text-align: left;
-  width: 300px;
+  width: 100%;
 }
 
 /* CSS cho phần Contact Info */
