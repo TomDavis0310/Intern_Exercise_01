@@ -1,28 +1,38 @@
-header {
-  color: #6d91ee;
-  width: 346px;
-  height: 87px;
-  top: 79px;
-  left: 819px;
-  angle: 0 deg;
-  opacity: 1;
-  font-family: Poppins;
-  font-weight: 300;
-  font-size: 60px;
-  leading-trim: NONE;
-  line-height: 118%;
-  letter-spacing: 0%;
-  vertical-align: middle;
-  text-align: center;
-  margin: 100px 0 0;
+.site-header {
+  padding-top: 30px;
 }
-.span {
-  font-family: Poppins;
-  font-weight: 800px;
-  font-size: 21px;
-  leading-trim: NONE;
-  line-height: 118%;
-  letter-spacing: 75.5%;
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.logo-icon {
+  width: 83px;
+  height: 59px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-family: Poppins, sans-serif;
+  font-weight: 346px;
+  font-size: 87px;
+  line-height: 1;
+  color: #6d91ee;
+  vertical-align: middle;
+}
+
+.brand-sub {
+  font-family: Poppins, sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: 80%;
+  color: #6d91ee;
+  margin-top: 2px;
   vertical-align: middle;
 }
 .trash {
@@ -41,15 +51,36 @@ h1 {
   line-height: 89.5px;
   letter-spacing: 0%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .background-body {
   background-image: url("../assets/images/Vector7.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 60%;
-  height: 500px;
+  background-size: 70% 100%;
+  width: 100%;
+  min-height: 100vh;
 }
+
+.background-about {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 20px;
+  background-image:
+    linear-gradient(rgba(109, 145, 238, 0.75), rgba(109, 145, 238, 0.75)),
+    url("../assets/images/43449ec75ab4770fb0ff3123d0ae01db31c409a7.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 h2 {
   width: 366;
   height: 90;
@@ -69,6 +100,14 @@ h2 {
   font-style: normal;
   padding: 20px;
   margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about {
+  color: #ffffff;
+  border: 2px #ffffff;
 }
 .under {
   font-weight: 900px;
@@ -88,11 +127,12 @@ p {
   font-family: Poppins;
   font-weight: 600;
   font-size: 18px;
-  leading-trim: NONE;
   line-height: 25.5px;
   letter-spacing: 0%;
   text-align: center;
-  colp: #4f4f4f;
+  color: #4f4f4f;
+  width: 552px;
+  display: center;
 }
 
 .container {
@@ -111,7 +151,7 @@ p {
 }
 
 .input-field {
-  width: 374px;
+  width: 100%;
   height: 56px;
   border-radius: 61px;
   background: #cedcff;
@@ -122,18 +162,85 @@ p {
   outline: none;
 }
 
-.btn_help_me {
+.btn,
+.btn-about {
   width: 200px;
   height: 60px;
   border-radius: 71px;
-  background: white;
-  border: 2px solid #5180f6;
-  color: #5180f6;
+  background: #5180f6;
+  color: rgb(255, 255, 255);
+  border: none;
   font-weight: bold;
   cursor: pointer;
   margin-top: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
+.btn-about {
+  background: #eec04b;
+  color: #000000;
+}
+
+/* CSS cho phần Services */
+
+.services-list {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  width: 1199px;
+  height: 504px;
+  margin: 0 auto 36px;
+}
+
+.service-card {
+  width: 385px;
+  height: 504px;
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.service-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card-body {
+  padding: 20px;
+}
+
+.service-card-body h3 {
+  margin: 0 0 10px;
+  color: #1f2a5a;
+  font-family: Poppins;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.service-card-body p {
+  margin: 0;
+  line-height: 1.65;
+  color: #4a4a4a;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: left;
+  width: 300px;
+}
+
+/* CSS cho phần Contact Info */
 .contact-info {
   list-style: none;
   padding: 0;
@@ -154,6 +261,7 @@ p {
   height: 24px;
 }
 
+/* CSS của footer */
 .end_footer {
   width: 100%;
   height: 145px;
