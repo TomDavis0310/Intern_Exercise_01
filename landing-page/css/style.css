@@ -7,79 +7,149 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background: #f5f5f5;
 }
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* CSS cho phần header và logo */
+/* HERO */
+.background-body {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f3f3f3;
+  background-image: url("../assets/images/Vector7.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 68% 100%;
+  overflow: hidden;
+}
+
+.background-body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 46%;
+  height: 100%;
+  background: #f7f7f7;
+  clip-path: polygon(32% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 0;
+}
+
+/* header */
 .site-header {
-  padding-top: 30px;
+  position: relative;
+  z-index: 2;
+  padding-top: 22px;
+  margin: 70px auto;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   width: fit-content;
-  margin: 80px auto 80px;
+  margin: 0 auto 55px;
 }
 
 .logo-icon {
-  width: 83px;
-  height: 59px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
 }
 
 .brand-name {
-  font-family: Poppins, sans-serif;
   font-weight: 300;
-  font-size: 87px;
+  font-size: 58px;
   line-height: 1;
   color: #6d91ee;
-  vertical-align: middle;
 }
 
 .brand-sub {
-  font-family: Poppins, sans-serif;
-  font-weight: 800;
-  font-size: 30px;
+  font-weight: 700;
+  font-size: 14px;
   line-height: 1.2;
-  letter-spacing: 0.35em;
+  letter-spacing: 1.2em;
   color: #6d91ee;
   margin-top: 2px;
-  vertical-align: middle;
+  text-transform: uppercase;
 }
-.trash {
-  width: 83px;
-  height: 59px;
-  top: 0px;
-  left: 0px;
-  opacity: 1;
-}
-h1 {
-  color: #4f4f4f;
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-size: 96px;
-  line-height: 89.5px;
-  letter-spacing: 0%;
-  text-align: center;
+
+/* content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 650px;
+  margin: 70px auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px auto;
+  text-align: center;
 }
 
-.background-body {
-  background-image: url("../assets/images/Vector7.jpg");
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 70% 100%;
-  width: 100%;
-  min-height: 100vh;
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-expert {
+  width: 167px;
+  height: 50px;
+  border-radius: 71px;
+  background: #6d91ee;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 26px;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+/* heading */
+h1 {
+  color: #4f4f4f;
+  font-weight: 250;
+  font-size: 96px;
+  line-height: 0.95;
+  text-align: center;
+  margin: 0;
+}
+
+.under {
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 0.95;
+  display: inline-block;
+}
+
+/* paragraph */
+.hero-text p {
+  max-width: 640px;
+  margin: 24px auto;
+  color: #4f4f4f;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.45;
+  text-align: center;
 }
 
 .background-about {
@@ -104,10 +174,11 @@ h1 {
   width: 65%;
   height: 120%;
   background: #6d91ee;
-  z-index: 1;
   clip-path: polygon(34% 0, 100% 0, 100% 100%, 0 100%);
   border-top-left-radius: 90px;
   border-bottom-left-radius: 220px;
+  z-index: 0;
+  pointer-events: none;
 }
 .about-wrapper {
   position: relative;
@@ -118,6 +189,11 @@ h1 {
   justify-content: space-between;
   align-items: flex-start;
   gap: 80px;
+}
+
+.about-wrapper {
+  position: relative;
+  z-index: 1;
 }
 
 .about-left,
@@ -174,11 +250,11 @@ h1 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-h2 {
-  width: 366;
-  height: 90;
-  top: 3491px;
-  left: 768px;
+/* h2 {
+  width: auto;
+  height: auto;
+  top: auto;
+  left: auto;
   opacity: 1;
   font-family: "Poppins", sans-serif;
   font-weight: 900;
@@ -189,11 +265,26 @@ h2 {
   color: #6d91ee;
   border: 2px #6d91ee;
   font-style: normal;
-  padding: 20px;
-  margin: 20px;
+  padding: 0;
+  margin: o;
+  white-space: nowrap;
   /* display: flex; */
-  flex-direction: column;
+/* /* flex-direction: column;
   align-items: center;
+   */ /*
+} */
+
+.contact-heading h2 {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #6d91ee;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0%;
+  text-align: center;
 }
 
 .about {
@@ -330,6 +421,8 @@ p {
 }
 /*CSS cho phần Contact */
 .container {
+  /* width: 100%;
+  max-width: 900px; */
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -338,10 +431,13 @@ p {
 }
 
 .contact-form {
+  width: 100%;
+  max-width: 380px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  gap: 16px;
+  align-items: stretch;
+  /* align-items: center; */
 }
 
 .input-field {
@@ -356,10 +452,11 @@ p {
   outline: none;
 }
 
-.btn,
-.btn-about {
-  width: 200px;
-  height: 60px;
+.btn {
+  width: 280px;
+  height: 86px;
+  top: 1594px;
+  left: 811px;
   border-radius: 71px;
   background: #5180f6;
   color: rgb(255, 255, 255);
@@ -370,14 +467,47 @@ p {
   align-items: center;
   display: flex;
   justify-content: center;
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.btn-expert:hover {
+  transform: translateY(-2px);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-expert {
+  width: 167px;
+  height: 50px;
+  border-radius: 71px;
+  background: #6d91ee;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 26px;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .btn-about {
-  position: relative;
-  margin: 100px auto 0;
-  background: #fcfcfcfc;
+  margin-top: auto;
+  background: #eec04b;
   color: #000000;
-  z-index: 3;
 }
 
 .btn-contract {
@@ -404,6 +534,8 @@ p {
   border-radius: 22px;
   overflow: hidden;
   text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
 .service-card img {
@@ -467,4 +599,57 @@ p {
   width: 100%;
   height: 145px;
   background: #0c1e49;
+}
+
+.contact-section {
+  position: relative;
+  background: #f3f3f3;
+  padding: 60px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* khung title chỉ ôm đúng chữ */
+.contact-heading {
+  position: relative;
+  display: flex;
+  width: 496px;
+  height: 122px;
+  margin: 100px auto 50px;
+  /* padding: 18px 60px; */
+  align-items: center;
+  justify-content: center;
+}
+
+/* 4 line chỉ bám quanh title */
+.contact-heading .line {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #6d91ee;
+}
+
+.line-top-left {
+  top: 10px;
+  left: 12px;
+  transform: rotate(-45deg);
+}
+
+.line-top-right {
+  top: 10px;
+  right: 12px;
+  transform: rotate(45deg);
+}
+
+.line-bottom-left {
+  bottom: 10px;
+  left: 12px;
+  transform: rotate(45deg);
+}
+
+.line-bottom-right {
+  bottom: 10px;
+  right: 12px;
+  transform: rotate(-45deg);
 }
