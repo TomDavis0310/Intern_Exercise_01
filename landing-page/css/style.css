@@ -222,9 +222,6 @@ h1 {
   color: #ffffff;
 }
 
-.about-title {
-  font-size: 32px;
-}
 .about-text,
 .about-text.left,
 .about-text.right {
@@ -540,11 +537,11 @@ p {
   overflow: hidden;
   text-align: left;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 }
 
 .service-card:hover {
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
@@ -663,3 +660,14 @@ p {
   right: 12px;
   transform: rotate(-45deg);
 }
+
+/* .fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+} */

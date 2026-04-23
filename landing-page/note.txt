@@ -1,0 +1,7 @@
+Sửa html và css
+- Các khoảng trắng
+- Các dòng trống
+- Nút about cho sát dưới section
+- Sửa lại các khung của h2
+- ở css mobile sửa lại thẻ của testimonials
+- Ở foote có dư khoảng trắng
