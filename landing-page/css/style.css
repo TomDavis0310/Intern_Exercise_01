@@ -100,9 +100,9 @@ img {
   align-items: center;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
+/* .btn:hover {
+  transition: all 0.3s ease;
+} */
 
 .btn-expert {
   width: 167px;
@@ -123,6 +123,7 @@ img {
   text-align: center;
   position: relative;
   z-index: 2;
+  transition: all 0.3s ease;
 }
 /* heading */
 h1 {
@@ -189,6 +190,7 @@ h1 {
   justify-content: space-between;
   align-items: flex-start;
   gap: 80px;
+  display: flex;
 }
 
 .about-wrapper {
@@ -220,6 +222,9 @@ h1 {
   color: #ffffff;
 }
 
+.about-title {
+  font-size: 32px;
+}
 .about-text,
 .about-text.left,
 .about-text.right {
@@ -312,9 +317,8 @@ p {
   letter-spacing: 0%;
   text-align: center;
   color: #4f4f4f;
-  width: 552px;
-  display: center;
-  margin: auto;
+  max-width: 552px;
+  margin: 0 auto;
 }
 
 /* CSS cho phần Testimonials */
@@ -471,6 +475,7 @@ p {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
+  transition: all 0.3s ease;
 }
 
 .btn-expert:hover {
@@ -536,6 +541,11 @@ p {
   text-align: left;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transition: all 0.3s ease;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
 .service-card img {

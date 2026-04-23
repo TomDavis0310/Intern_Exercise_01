@@ -3,3 +3,196 @@
   color: white;
 }
 
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .background-body {
+    min-height: auto;
+    padding: 20px 16px 50px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .background-body::after {
+    display: none;
+  }
+
+  .site-header {
+    margin: 20px auto 30px;
+    padding-top: 0;
+  }
+
+  .logo {
+    gap: 8px;
+    margin: 0 auto 30px;
+  }
+
+  .logo-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-name {
+    font-size: 32px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .brand-sub {
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    line-height: 1.2;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin: 20px auto 0;
+    padding: 0 8px;
+  }
+
+  .background-about {
+    min-height: auto; /* bỏ chiều cao cứng */
+    padding: 50px 20px 60px; /* giảm padding */
+  }
+
+  .about-overlay-shape {
+    display: none; /* bỏ shape xanh */
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-right {
+    padding-top: 0;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+
+  .about-button-wrap {
+    margin-top: 30px;
+  }
+
+  .about-text,
+  .about-text.left,
+  .about-text.right {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .service-card {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  .under {
+    font-size: 48px;
+  }
+
+  .btn {
+    width: 160px;
+    height: 48px;
+    font-size: 14px;
+    border-radius: 40px;
+  }
+
+  .btn-expert {
+    width: 110px;
+    height: 48px;
+    font-size: 14px;
+    border-radius: 40px;
+  }
+
+  .about-title {
+    font-size: 32px;
+  }
+  .testimonials-box {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .contact-heading h2 {
+    font-size: 36px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .contact-heading {
+    width: 100%;
+    max-width: 300px;
+    height: 90px;
+    margin: 50px auto 35px;
+  }
+
+  .contact-heading h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .contact-heading .line {
+    width: 18px;
+    height: 2px;
+  }
+
+  .line-top-left {
+    top: 8px;
+    left: 8px;
+  }
+
+  .line-top-right {
+    top: 8px;
+    right: 8px;
+  }
+
+  .line-bottom-left {
+    bottom: 8px;
+    left: 8px;
+  }
+
+  .line-bottom-right {
+    bottom: 8px;
+    right: 8px;
+  }
+}
