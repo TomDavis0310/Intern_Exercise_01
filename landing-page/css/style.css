@@ -455,8 +455,6 @@ p {
 .btn {
   width: 280px;
   height: 86px;
-  top: 1594px;
-  left: 811px;
   border-radius: 71px;
   background: #5180f6;
   color: rgb(255, 255, 255);
@@ -479,9 +477,9 @@ p {
   transform: translateY(-2px);
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
+/* .btn:hover {
+  transform: translateY(2px);
+} */
 
 .btn-expert {
   width: 167px;
@@ -505,6 +503,8 @@ p {
 }
 
 .btn-about {
+  position: relative;
+  z-index: 20;
   margin-top: auto;
   background: #eec04b;
   color: #000000;
