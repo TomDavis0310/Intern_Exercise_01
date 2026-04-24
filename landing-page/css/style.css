@@ -706,14 +706,3 @@ p {
   right: -20px;
   transform: rotate(-45deg);
 }
-
-/* .fade-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s ease;
-}
-
-.fade-section.show {
-  opacity: 1;
-  transform: translateY(0);
-} */
