@@ -1,4 +1,4 @@
-Sửa html và css
+Sửa html và css:
 - Các khoảng trắng
 - Các dòng trống
 - Nút about cho sát dưới section

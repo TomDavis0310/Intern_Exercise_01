@@ -12,13 +12,10 @@
 
   .background-body {
     min-height: auto;
-    padding: 20px 16px 50px;
+    padding: 20px 16px 20px;
     background-size: cover;
     background-position: center;
-  }
-
-  .background-body::after {
-    display: none;
+    background-color: #f3f3f3;
   }
 
   .site-header {
@@ -56,7 +53,7 @@
 
   .background-about {
     min-height: auto; /* bỏ chiều cao cứng */
-    padding: 50px 20px 60px; /* giảm padding */
+    padding: 50px 20px 20px; /* giảm padding */
   }
 
   .about-overlay-shape {
@@ -93,6 +90,7 @@
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 16px;
+    text-align: center;
   }
 
   .service-card {
@@ -144,55 +142,76 @@
     grid-template-columns: 1fr;
   }
 
+  .testimonial-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+  }
   .container {
     flex-direction: column;
     align-items: center;
     gap: 40px;
   }
 
-  .contact-heading h2 {
-    font-size: 36px;
-    white-space: normal;
+  /* Heading mobile */
+  .contact-heading {
+    position: relative;
+    width: fit-content;
+    max-width: none;
+    height: auto;
+    margin: 50px auto 35px;
     text-align: center;
   }
 
-  .contact-heading {
-    width: 100%;
-    max-width: 300px;
-    height: 90px;
-    margin: 50px auto 35px;
-  }
-
   .contact-heading h2 {
-    font-size: 32px;
-    line-height: 1.2;
+    position: relative;
     margin: 0;
     padding: 0;
+    font-size: 32px;
+    line-height: 1;
     white-space: nowrap;
+    text-align: center;
   }
 
-  .contact-heading .line {
+  /* 4 line mobile */
+  .contact-heading::before,
+  .contact-heading::after,
+  .contact-heading h2::before,
+  .contact-heading h2::after {
+    content: "";
+    position: absolute;
     width: 18px;
     height: 2px;
+    background: #6d91ee;
   }
 
-  .line-top-left {
-    top: 8px;
-    left: 8px;
+  .contact-heading::before {
+    top: -14px;
+    left: -26px;
+    transform: rotate(-45deg);
   }
 
-  .line-top-right {
-    top: 8px;
-    right: 8px;
+  .contact-heading::after {
+    top: -14px;
+    right: -26px;
+    transform: rotate(45deg);
   }
 
-  .line-bottom-left {
-    bottom: 8px;
-    left: 8px;
+  .contact-heading h2::before {
+    bottom: -14px;
+    left: -26px;
+    transform: rotate(45deg);
   }
 
-  .line-bottom-right {
-    bottom: 8px;
-    right: 8px;
+  .contact-heading h2::after {
+    bottom: -14px;
+    right: -26px;
+    transform: rotate(-45deg);
   }
 }
