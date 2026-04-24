@@ -5,14 +5,18 @@ body.dark-mode {
   --color-bg-body: #111111;
   --color-bg-section: #181818;
   --color-text-main: #ffffff;
-  --color-text-muted: #dddddd;
+  --color-text-dark: #dbe5ff;
+  --color-text-muted: #cccccc;
   --color-white: #222222;
+  --color-black: #ffffff;
   --color-primary: #8aa8ff;
+  --color-primary-dark: #6d91ee;
+  --color-bg-input: #2a2a2a;
+  --color-footer: #050b1f;
 
-  background-color: var(--color-bg-body);
+  background: var(--color-bg-body);
   color: var(--color-text-main);
 }
-
 /* =========================
    TABLET / MOBILE
 ========================= */
@@ -29,9 +33,21 @@ body.dark-mode {
   .background-body {
     min-height: 100vh;
     padding: 20px 16px 50px;
-
     background-image: none;
     background-color: var(--color-text-main);
+  }
+
+  body.dark-mode .background-body {
+    background-image: none;
+    background-color: var(--color-bg-section);
+  }
+
+  body.dark-mode .background-body h1,
+  body.dark-mode .background-body .under,
+  body.dark-mode .background-body p,
+  body.dark-mode .background-body .btn,
+  body.dark-mode .background-body .btn-expert {
+    color: var(--color-text-main);
   }
 
   .site-header {

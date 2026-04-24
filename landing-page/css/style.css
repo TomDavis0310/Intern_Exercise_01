@@ -91,7 +91,7 @@ img {
 
   background-color: var(--color-bg-section);
   background-image: url("../assets/images/Vector7.jpg");
-  background-size: 68% auto;
+  background-size: 68% 95%;
   background-repeat: no-repeat;
   background-position: left top;
   overflow: hidden;
@@ -674,4 +674,25 @@ h3 {
 .fade-section.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+#themeToggle {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  z-index: 20;
+
+  padding: 6px 12px;
+  border: 1px solid #6d91ee;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #6d91ee;
+
+  font-family: var(--font-main);
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+  outline: none;
 }
