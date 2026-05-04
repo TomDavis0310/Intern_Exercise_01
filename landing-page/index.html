@@ -23,12 +23,14 @@
   <body>
     <section class="background-body">
       <header class="site-header">
-        <button id="themeToggle" type="button">Dark Mode</button>
+        <button id="themeToggle" type="button">&#127769;</button>
         <div class="logo">
           <img
+            class="lazy-img"
             src="assets/icons/Trash Hauling.ico"
             alt="Trash Hauling"
             class="logo-icon"
+            loading="lazy"
           />
 
           <div>
@@ -72,7 +74,8 @@
             <img
               src="assets/images/Rectangle 263.jpg"
               alt="About Us"
-              class="about-image"
+              class="about-image lazy-img"
+              loading="lazy"
             />
           </div>
 
@@ -103,7 +106,12 @@
 
         <div class="services-list">
           <article class="service-card">
-            <img src="assets/images/Rectangle1.jpg" alt="Service 1" />
+            <img
+              class="lazy-img"
+              src="assets/images/Rectangle1.jpg"
+              alt="Service 1"
+              loading="lazy"
+            />
             <div class="service-card-body">
               <h3>Lorem Ipsum</h3>
               <p>
@@ -116,7 +124,12 @@
           </article>
 
           <article class="service-card">
-            <img src="assets/images/Rectangle2.jpg" alt="Service 2" />
+            <img
+              class="lazy-img"
+              src="assets/images/Rectangle2.jpg"
+              alt="Service 2"
+              loading="lazy"
+            />
             <div class="service-card-body">
               <h3>Lorem Ipsum</h3>
               <p>
@@ -129,7 +142,12 @@
           </article>
 
           <article class="service-card">
-            <img src="assets/images/Rectangle3.jpg" alt="Service 3" />
+            <img
+              class="lazy-img"
+              src="assets/images/Rectangle3.jpg"
+              alt="Service 3"
+              loading="lazy"
+            />
             <div class="service-card-body">
               <h3>Lorem Ipsum</h3>
               <p>
@@ -156,7 +174,8 @@
             <img
               src="assets/images/Ellipse 1.jpg"
               alt="Courtney Henry"
-              class="testimonial-avatar"
+              loading="lazy"
+              class="testimonial-avatar lazy-img"
             />
             <div class="testimonial-content">
               <h3>Courtney Henry</h3>
@@ -176,7 +195,8 @@
             <img
               src="assets/images/Ellipse 1.jpg"
               alt="Courtney Henry"
-              class="testimonial-avatar"
+              class="testimonial-avatar lazy-img"
+              loading="lazy"
             />
             <div class="testimonial-content">
               <h3>Courtney Henry</h3>
@@ -196,7 +216,8 @@
             <img
               src="assets/images/Ellipse 1.jpg"
               alt="Courtney Henry"
-              class="testimonial-avatar"
+              class="testimonial-avatar lazy-img"
+              loading="lazy"
             />
             <div class="testimonial-content">
               <h3>Courtney Henry</h3>
@@ -216,7 +237,8 @@
             <img
               src="assets/images/Ellipse 1.jpg"
               alt="Courtney Henry"
-              class="testimonial-avatar"
+              class="testimonial-avatar lazy-img"
+              loading="lazy"
             />
             <div class="testimonial-content">
               <h3>Courtney Henry</h3>
@@ -233,6 +255,7 @@
           </article>
         </div>
       </section>
+
       <!-- Section Contact Us -->
       <section id="contact" class="contact-section">
         <div class="contact-heading">
@@ -242,30 +265,27 @@
           <form class="contact-form" id="contactForm">
             <input
               id="email"
-              name="email"
-              type="email"
-              placeholder="Email"
               class="input-field"
-              required
+              type="text"
+              placeholder="Email"
             />
+            <small class="error-message" id="emailError"></small>
 
             <input
               id="phone"
-              name="phone"
+              class="input-field"
               type="text"
               placeholder="Phone"
-              class="input-field"
-              required
             />
+            <small class="error-message" id="phoneError"></small>
 
             <input
               id="address"
-              name="address"
+              class="input-field"
               type="text"
               placeholder="Address"
-              class="input-field"
-              required
             />
+            <small class="error-message" id="addressError"></small>
 
             <button type="submit" id="btnSubmit" class="btn btn-contract">
               Help Me
@@ -274,19 +294,30 @@
 
           <ul class="contact-info">
             <li>
-              <img src="assets/icons/mail.ico" class="ico_footer" alt="Email" />
+              <img
+                src="assets/icons/mail.ico"
+                class="ico_footer lazy-img"
+                alt="Email"
+                loading="lazy"
+              />
               test@gmail.com
             </li>
             <li>
               <img
                 src="assets/icons/phone.ico"
-                class="ico_footer"
+                class="ico_footer lazy-img"
                 alt="Phone"
+                loading="lazy"
               />
               (303) 555-0105
             </li>
             <li>
-              <img src="assets/icons/map.ico" class="ico_footer" alt="Map" />
+              <img
+                src="assets/icons/map.ico"
+                class="ico_footer lazy-img"
+                alt="Map"
+                loading="lazy"
+              />
               2715 Ash Dr. San Jose, South Dakota 83475
             </li>
           </ul>

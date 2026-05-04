@@ -18,6 +18,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // ===== Image Lazy Loading =====
+    const lazyImages = document.querySelectorAll(".lazy-img");
+
+    const imageObserver = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+        const img = entry.target;
+
+        img.classList.add("loaded");
+
+        observer.unobserve(img);
+        }
+    });
+    }, {
+    threshold: 0.1
+    });
+
+    lazyImages.forEach(function (img) {
+    imageObserver.observe(img);
+    });
+
     // ===== Scroll animation =====
     const sections = document.querySelectorAll("main section");
 
@@ -46,52 +67,65 @@ document.addEventListener("DOMContentLoaded", function () {
     const phone = document.querySelector("#phone");
     const address = document.querySelector("#address");
 
+    const emailError = document.querySelector("#emailError");
+    const phoneError = document.querySelector("#phoneError");
+    const addressError = document.querySelector("#addressError");
+
     function isValidEmail(value) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+
+    function showError(input, errorElement, message) {
+    input.classList.add("error");
+    errorElement.textContent = message;
+    }
+
+    function clearError(input, errorElement) {
+    input.classList.remove("error");
+    errorElement.textContent = "";
     }
 
     form.addEventListener("submit", function (e) {
-        e.preventDefault();
+    e.preventDefault();
 
-        const emailValue = email.value.trim();
-        const phoneValue = phone.value.trim();
-        const addressValue = address.value.trim();
+    const emailValue = email.value.trim();
+    const phoneValue = phone.value.trim();
+    const addressValue = address.value.trim();
 
-        if (emailValue === "" || !isValidEmail(emailValue)) {
-        let msg = "";
+    clearError(email, emailError);
+    clearError(phone, phoneError);
+    clearError(address, addressError);
 
-        if (emailValue === "") {
-            msg = "Email không được để trống";
-        } else {
-            msg = "Email không hợp lệ";
-        }
+    let isValid = true;
 
-        alert(msg);
-        return;
-        }
+    if (emailValue === "") {
+        showError(email, emailError, "Email không được để trống");
+        isValid = false;
+    } else if (!isValidEmail(emailValue)) {
+        showError(email, emailError, "Email không hợp lệ");
+        isValid = false;
+    }
 
-        if (phoneValue === "" || phoneValue.length < 10 || !/^\d+$/.test(phoneValue)) {
-        let msg = "";
+    if (phoneValue === "") {
+        showError(phone, phoneError, "Số điện thoại không được để trống");
+        isValid = false;
+    } else if (!/^\d+$/.test(phoneValue)) {
+        showError(phone, phoneError, "Số điện thoại phải là số");
+        isValid = false;
+    } else if (phoneValue.length < 10) {
+        showError(phone, phoneError, "Số điện thoại phải có ít nhất 10 số");
+        isValid = false;
+    }
 
-        if (phoneValue === "") {
-            msg = "Số điện thoại không được để trống";
-        } else if (!/^\d+$/.test(phoneValue)) {
-            msg = "Số điện thoại phải là số";
-        } else {
-            msg = "Số điện thoại phải có ít nhất 10 số";
-        }
+    if (addressValue === "") {
+        showError(address, addressError, "Địa chỉ không được để trống");
+        isValid = false;
+    }
 
-        alert(msg);
-        return;
-        }
+    if (!isValid) return;
 
-        if (addressValue === "") {
-        alert("Địa chỉ không được để trống");
-        return;
-        }
-
-        alert("Gửi thành công!");
-        form.reset();
+    alert("Gửi thành công!");
+    form.reset();
     });
 
         const themeToggle = document.querySelector("#themeToggle");
@@ -100,9 +134,9 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.classList.toggle("dark-mode");
 
             if (document.body.classList.contains("dark-mode")) {
-            themeToggle.textContent = "Light Mode";
+            themeToggle.textContent = "\u2600\uFE0F" ;
             } else {
-            themeToggle.textContent = "Dark Mode";
+            themeToggle.textContent = "\u{1F319}";
             }
         });
 

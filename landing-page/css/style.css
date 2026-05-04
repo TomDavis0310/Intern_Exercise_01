@@ -57,9 +57,6 @@
   --services-width: 1199px;
 }
 
-/* =========================
-   BASE
-========================= */
 html,
 body {
   margin: 0;
@@ -76,13 +73,11 @@ img {
   display: block;
 }
 
-/* =========================
-   HERO
-========================= */
+/* ====HERO============ */
 .background-body {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  /* min-height: ; */
   padding-bottom: 60px auto 0px;
 
   /* display: flex;
@@ -91,10 +86,12 @@ img {
 
   background-color: var(--color-bg-section);
   background-image: url("../assets/images/Vector7.jpg");
-  background-size: 68% 95%;
+  /* background-size: 68% 95%; */
   background-repeat: no-repeat;
   background-position: left top;
   overflow: hidden;
+  background: contain;
+  margin: 0 0 40px;
 }
 
 /* Header */
@@ -361,9 +358,6 @@ h1 {
   color: var(--color-black);
 }
 
-/* =========================
-   GLOBAL TEXT
-========================= */
 p {
   font-family: var(--font-main);
   /* font-weight: 600;
@@ -383,9 +377,6 @@ h3 {
   text-align: center;
 }
 
-/* =========================
-   SECTION HEADING DECORATION
-========================= */
 .contact-heading {
   position: relative;
   display: inline-block;
@@ -447,9 +438,7 @@ h3 {
   transform: rotate(-45deg);
 }
 
-/* =========================
-   SERVICES
-========================= */
+/* =======SERVICES=========== */
 .services-list {
   display: flex;
   justify-content: center;
@@ -506,9 +495,7 @@ h3 {
   width: 100%;
 }
 
-/* =========================
-   TESTIMONIALS
-========================= */
+/* ======TESTIMONIALS============== */
 .testimonials {
   padding: 80px var(--space-md) var(--space-xxl);
   background: var(--color-bg-section);
@@ -576,7 +563,7 @@ h3 {
   line-height: 1;
 }
 
-/* ========   CONTACT============= */
+/* ========CONTACT============= */
 .contact-section {
   position: relative;
   background: var(--color-bg-section);
@@ -641,9 +628,7 @@ h3 {
   height: 24px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ===========FOOTER=============== */
 .end_footer {
   width: 100vw;
   height: 145px;
@@ -675,7 +660,7 @@ h3 {
 }
 
 #themeToggle {
-  position: absolute;
+  position: fixed;
   top: 18px;
   right: 16px;
   z-index: 20;
@@ -693,4 +678,40 @@ h3 {
 
   cursor: pointer;
   outline: none;
+}
+
+/* =========================
+   IMAGE LAZY LOADING
+========================= */
+.lazy-img {
+  opacity: 0;
+  filter: blur(8px);
+  transition:
+    opacity 0.4s ease,
+    filter 0.4s ease;
+}
+
+.lazy-img.loaded {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* ================
+    ERROR
+================ */
+
+.error-message {
+  display: block;
+  min-height: 18px;
+  margin: -8px 0 4px 24px;
+
+  color: #e63946;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.input-field.error {
+  border: 2px solid #e63946;
+  background: #ffecec;
 }

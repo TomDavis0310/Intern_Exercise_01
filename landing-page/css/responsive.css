@@ -32,10 +32,14 @@ body.dark-mode {
      HERO
   ========================= */
   .background-body {
-    min-height: 100vh;
-    padding: 20px 16px 50px;
     background-image: none;
     background-color: var(--color-text-main);
+    min-height: 100vh;
+    padding: 40px 16px 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   body.dark-mode .background-body {
@@ -57,6 +61,8 @@ body.dark-mode {
   }
 
   .logo {
+    display: flex;
+    align-items: center;
     gap: 8px;
     margin: 0 auto 30px;
   }
@@ -64,6 +70,7 @@ body.dark-mode {
   .logo-icon {
     width: 44px;
     height: 44px;
+    object-fit: contain;
   }
 
   .brand-name {
@@ -79,9 +86,16 @@ body.dark-mode {
   }
 
   .hero-content {
+    flex: 1;
     max-width: 100%;
-    margin: 20px auto 0;
+    margin: 0 auto;
     padding: 0 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .hero-text {
