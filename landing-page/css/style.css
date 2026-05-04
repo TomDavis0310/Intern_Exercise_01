@@ -86,7 +86,7 @@ img {
 
   background-color: var(--color-bg-section);
   background-image: url("../assets/images/Vector7.jpg");
-  /* background-size: 68% 95%; */
+  background-size: 70% auto;
   background-repeat: no-repeat;
   background-position: left top;
   overflow: hidden;
@@ -602,6 +602,48 @@ h3 {
   outline: none;
 }
 
+/* Accessible focus styles */
+:focus {
+  outline: none;
+}
+
+.focus-ring {
+  box-shadow: 0 0 0 4px rgba(81, 128, 246, 0.18);
+  border-radius: 8px;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 0 4px rgba(81, 128, 246, 0.12);
+  border-radius: var(--radius-pill);
+}
+
+.btn:focus,
+.btn-expert:focus,
+#themeToggle:focus,
+.btn-contract:focus {
+  box-shadow: 0 0 0 4px rgba(109, 145, 238, 0.18);
+  transform: none;
+}
+
+/* Visible focus for keyboard users using :focus-visible if supported */
+*:focus-visible {
+  outline: 3px solid rgba(81, 128, 246, 0.22);
+  outline-offset: 3px;
+}
+
+/* Screen-reader-only utility */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .btn-contract {
   background: var(--color-white);
   color: var(--color-primary-dark);
@@ -664,22 +706,13 @@ h3 {
   top: 18px;
   right: 16px;
   z-index: 20;
-
-  padding: 6px 12px;
-  border: 1px solid #6d91ee;
-  border-radius: 12px;
-
+  /* padding: 6px 12px;
+  border-radius: 12px; */
   background: #ffffff;
-  color: #6d91ee;
 
   font-family: var(--font-main);
-  font-size: 12px;
   font-weight: 600;
-
-  cursor: pointer;
-  outline: none;
 }
-
 /* =========================
    IMAGE LAZY LOADING
 ========================= */

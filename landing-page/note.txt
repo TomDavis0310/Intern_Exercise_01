@@ -1,7 +1,8 @@
-Sửa html và css:
-- Các khoảng trắng
-- Các dòng trống
-- Nút about cho sát dưới section
-- Sửa lại các khung của h2
-- ở css mobile sửa lại thẻ của testimonials
-- Ở foote có dư khoảng trắng
+Hiện tại đang lỗi cụ thể là code đang quá dài, css root: id 
+chưa đề mokapi
+code vẫn có nhiều mục viết trong mơ hồ cụ thể tra khá nhiều 
+
+Smooth scroll khi click anchor link trong navbar
+Scroll animation: dùng IntersectionObserver để fade-in các section khi vào viewport
+
+2 yêu cầu trên chưa đủ hoàn thành

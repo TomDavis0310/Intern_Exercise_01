@@ -23,13 +23,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const imageObserver = new IntersectionObserver(function (entries, observer) {
     entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-        const img = entry.target;
+        if (!entry.isIntersecting) return;
 
+        const img = entry.target;
+        const realSrc = img.getAttribute("data-src");
+
+        if (realSrc) {
+        img.setAttribute("src", realSrc);
+        }
+
+        img.addEventListener("load", function () {
         img.classList.add("loaded");
+        });
 
         observer.unobserve(img);
-        }
     });
     }, {
     threshold: 0.1
@@ -127,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("Gửi thành công!");
     form.reset();
     });
-
+// =========== Theme toggle ===========
         const themeToggle = document.querySelector("#themeToggle");
 
         themeToggle.addEventListener("click", function () {
