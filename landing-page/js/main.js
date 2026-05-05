@@ -129,8 +129,13 @@ document.addEventListener("DOMContentLoaded", function () {
         isValid = false;
     }
 
-    if (!isValid) return;
+    if (!isValid) {
+        if (form) form.classList.add('has-error');
+        return;
+    }
 
+    // no errors
+    if (form) form.classList.remove('has-error');
     alert("Gửi thành công!");
     form.reset();
     });
