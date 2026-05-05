@@ -667,7 +667,7 @@ h3 {
 
   width: 44px;
   height: 44px;
-  border: 2px solid var(--color-primary);
+  border: 1px solid var(--color-primary);
   border-radius: 50%;
   background: var(--color-white);
   color: var(--color-primary);
@@ -682,6 +682,20 @@ h3 {
 
 #themeToggle:focus {
   box-shadow: 0 0 0 6px rgba(81, 128, 246, 0.12);
+}
+
+.theme-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-image: url("../assets/icons/moon.ico");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body.dark-mode .theme-icon {
+  background-image: url("../assets/icons/sun-outlined-svgrepo-com1.svg");
 }
 /* =========================
    IMAGE LAZY LOADING

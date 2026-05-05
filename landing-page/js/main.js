@@ -140,16 +140,19 @@ document.addEventListener("DOMContentLoaded", function () {
     form.reset();
     });
 // =========== Theme toggle ===========
-        const themeToggle = document.querySelector("#themeToggle");
+    const themeToggle = document.querySelector("#themeToggle");
 
-        themeToggle.addEventListener("click", function () {
-            document.body.classList.toggle("dark-mode");
+    if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    }
 
-            if (document.body.classList.contains("dark-mode")) {
-            themeToggle.textContent = "\u2600\uFE0F" ;
-            } else {
-            themeToggle.textContent = "\u{1F319}";
-            }
-        });
+    themeToggle.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
 
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+    });
 });
