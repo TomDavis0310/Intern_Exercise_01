@@ -95,22 +95,13 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const formEl = e.currentTarget || e.target;
+    const formEl = e.target;
 
     // Lấy giá trị từ FormData (theo yêu cầu: lấy giá trị form)
     const formData = new FormData(formEl);
-    const emailValue = (
-      (formData.get("email") ?? document.getElementById("email")?.value) ||
-      ""
-    ).trim();
-    const phoneValue = (
-      (formData.get("phone") ?? document.getElementById("phone")?.value) ||
-      ""
-    ).trim();
-    const addressValue = (
-      (formData.get("address") ?? document.getElementById("address")?.value) ||
-      ""
-    ).trim();
+    const emailValue = (formData.get("email") || "").trim();
+    const phoneValue = (formData.get("phone") || "").trim();
+    const addressValue = (formData.get("address") || "").trim();
 
     // Lấy phần tử DOM để thao tác UI theo id
     const email = document.getElementById("email");
