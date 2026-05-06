@@ -1,8 +1,3 @@
-Hiện tại đang lỗi cụ thể là code đang quá dài, css root: id 
-chưa đề mokapi
-code vẫn có nhiều mục viết trong mơ hồ cụ thể tra khá nhiều 
-
-Smooth scroll khi click anchor link trong navbar
-Scroll animation: dùng IntersectionObserver để fade-in các section khi vào viewport
-
-2 yêu cầu trên chưa đủ hoàn thành
+sửa lại form  lấy dữ liệu dựa theo e chứ ko theo conts
+nắm rỏ lại các cấu trúc sau : 
+cà js
